@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import imageSrc from "../assets/images.jpeg";
 const Header = () => {
   const [value, setValue] = useState(0);
 
@@ -112,7 +112,6 @@ const Header = () => {
           </nav>
         </header>
         <div class="max-w-(--breakpoint-lg) m-auto relative">
-         
           <div class="lg:flex justify-between pr-3 hidden">
             <div class="lg:flex justify-end hidden">
               <div class="pt-1 w-5">
@@ -143,10 +142,7 @@ const Header = () => {
                   overflow: "hidden",
                 }}
               >
-                <img
-                  class="w-6"
-                  src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/fatso.webp"
-                />
+                <img class="w-6" src={imageSrc} />
               </div>
               <div
                 class="text-lg font-bold font-[250] mt-1"
@@ -204,7 +200,7 @@ const Header = () => {
                 target="_blank"
                 href="https://www.coinbase.com/advanced-trade/spot/KEYCAT-USD"
               >
-                <div class="flex w-60 font-semibold py-3 px-10 border rounded-[53px] bg-white text-blue justify-center mb-4 lg:mb-0">
+                <div class="flex w-60 font-semibold py-3 px-10 border rounded-[53px] bg-white text-blue-800 justify-center mb-4 lg:mb-0">
                   Buy Now
                 </div>
               </a>
@@ -214,7 +210,7 @@ const Header = () => {
               <div class="lg:mb-2 mb-6">
                 <p class="text-xl font-medium">OFFICIAL LINKS:</p>
               </div>
-              <div class="flex pb-8 justify-between w-full">
+              <div class="flex pb-8 justify-between ">
                 <a href="https://x.com/KeyboardCatBase" target="_blank">
                   <img
                     src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/xlogo.webp"
@@ -229,26 +225,7 @@ const Header = () => {
                     alt="Telegram Logo"
                   />
                 </a>
-                <a
-                  href="https://www.facebook.com/thekeyboardcat"
-                  target="_blank"
-                >
-                  <img
-                    src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/Facebook_Logo_Primary.webp"
-                    class="h-8"
-                    alt="Facebook Logo"
-                  />
-                </a>
-                <a
-                  href="https://www.reddit.com/r/keyboardcatcoin/"
-                  target="_blank"
-                >
-                  <img
-                    src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/Reddit_Icon_FullColor.webp"
-                    class="h-8"
-                    alt="Reddit Logo"
-                  />
-                </a>
+
                 <a
                   href="https://coinmarketcap.com/currencies/keyboard-cat/"
                   target="_blank"
@@ -274,7 +251,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import imageSrc from "../assets/images.jpeg";
 function About() {
   return (
     <>
@@ -72,7 +73,6 @@ function About() {
                 </span>
               </div>
             </article>
-            
           </div>
           <div class="mt-14 flex flex-col gap-3 text-sm text-slate-600 md:flex-row md:items-center md:justify-between md:text-base">
             <span class="font-semibold text-blue">
@@ -201,27 +201,21 @@ function About() {
         <div class="max-w-(--breakpoint-lg) m-auto px-8 md:px-12 lg:px-0">
           <h1 class="lg:text-6xl lg:mb-12 text-4xl mb-10">About</h1>
           <img
-            class="rounded-lg lg:mb-12 lg:w-auto w-full mb-10"
-            src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/skinnylarge.webp"
-            alt="Keboard Cat (Skinny) laying down"
+            className="rounded-lg lg:mb-12 lg:w-auto w-full mb-10 object-cover"
+            src={imageSrc}
+            alt="Keyboard Cat (Skinny) laying down"
+            style={{ height: "400px", objectPosition: "center" }}
           />
           <div class="text-xl lg:text-2xl lg:mb-20 mb-10">
             <p class="mb-10">
-              Keyboard Cat is an iconic internet meme featuring a cat named
-              Fatso, who plays a keyboard with surprising musical talent! Since
-              Fatso&#x27;s debut in 2007, two other cats, Bento and Skinny, have
-              carried on the legacy, keeping the internet entertained with their
-              paws-on performances. Together, these three feline virtuosos have
-              become a symbol of meme culture, inspiring laughter and countless
-              parodies.
+              Disco Hamster is an electrifying internet meme featuring a funky
+              little hamster who can’t stop grooving to the beat! Bursting onto
+              the scene with glitter, lights, and unstoppable moves, this
+              disco-loving rodent has spun its way into the hearts of meme
+              lovers everywhere. From dazzling dance floors to viral video
+              loops, Disco Hamster embodies the spirit of fun, rhythm, and chaos
+              that defines meme culture — one spin at a time. 🐹✨🕺
             </p>
-            <a
-              href="https://en.wikipedia.org/wiki/Keyboard_Cat"
-              target="_blank"
-              class="text-blue"
-            >
-              MORE ON WIKIPEDIA →
-            </a>
           </div>
         </div>
       </div>
