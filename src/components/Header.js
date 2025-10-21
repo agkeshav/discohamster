@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import imageSrc from "../assets/images.jpeg";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import BuyButton from "./BuyBotton";
+
 const Header = () => {
   const [value, setValue] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -9,40 +16,17 @@ const Header = () => {
 
   return (
     <div class="relative z-0 overflow-hidden">
-      <div class="min-h-screen text-white relative z-10 bg-blue-800">
-        <header class="text-white font-bold mb-5 max-w-(--breakpoint-lg) m-auto pt-5 relative px-6 lg:px-0">
-          <nav class="flex flex-col gap-4 lg:gap-0">
-            <div
-              class="flex items-center justify-between lg:border-b lg:border-b-2 pb-2 lg:pb-5"
-              style={{ borderColor: "#528AFF" }}
-            >
-              <button
-                type="button"
-                class="inline-flex items-center justify-center rounded-md border border-white/20 p-2 text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40 lg:hidden"
-                aria-controls="mobile-nav-menu"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Toggle navigation</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-menu h-5 w-5"
-                  aria-hidden="true"
-                >
-                  <path d="M4 5h16"></path>
-                  <path d="M4 12h16"></path>
-                  <path d="M4 19h16"></path>
-                </svg>
-              </button>
-              <ul class="hidden lg:flex lg:items-center lg:space-x-6">
-                <li class="hover:underline">
+      {/* <div class="min-h-screen text-white relative z-10 bg-blue-800"> */}
+      <div
+        className="min-h-screen text-white relative z-10"
+        style={{ backgroundColor: "#0052FF" }}
+      >
+        <header className="text-white font-bold mb-5 max-w-(--breakpoint-lg) m-auto pt-2 relative px-6 lg:px-0">
+          <nav className="flex flex-col gap-4 lg:gap-0">
+            {/* Top nav row */}
+            {/* <div className="flex items-center justify-between py-6">
+              <ul className="flex items-center space-x-4">
+                <li className="hover:underline">
                   <a
                     href="https://basescan.org/token/0x9a26F5433671751C3276a065f57e5a02D2817973"
                     target="_blank"
@@ -51,7 +35,7 @@ const Header = () => {
                     CONTRACT
                   </a>
                 </li>
-                <li class="hover:underline">
+                <li className="hover:underline">
                   <a
                     href="https://en.wikipedia.org/wiki/Keyboard_Cat"
                     target="_blank"
@@ -61,58 +45,129 @@ const Header = () => {
                   </a>
                 </li>
               </ul>
-              <div class="text-2xl lg:invisible">
-                <button
-                  type="button"
-                  class="flex items-center justify-center rounded-md p-2 transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
-                  aria-label="Play audio"
-                >
-                  <svg
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    font-size="x-large"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
+            </div> */}
+
+
+            {/* Top Nav Row */}
+            <div className="flex items-center justify-between py-6">
+              {/* Left side links */}
+              <ul className="hidden lg:flex items-center space-x-6">
+                <li className="hover:underline">
+                  <a
+                    href="https://basescan.org/token/0x9a26F5433671751C3276a065f57e5a02D2817973"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <path d="M6 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                    <path d="M14.42 14.45a3 3 0 1 0 4.138 4.119"></path>
-                    <path d="M9 17v-8m0 -4v-1h10v11"></path>
-                    <path d="M12 8h7"></path>
-                    <path d="M3 3l18 18"></path>
-                  </svg>
-                </button>
-              </div>
+                    CONTRACT
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a
+                    href="https://en.wikipedia.org/wiki/Keyboard_Cat"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    WHITEPAPER
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a
+                    // href=""
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    COMMUNITY MEMES
+                  </a>
+                </li>
+                <li className="hover:underline">
+                  <a
+                    // href=""
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    OFFICIAL CONTENT
+                  </a>
+                </li>
+              </ul>
+
+              {/* Mobile menu button */}
+              <button
+                className="lg:hidden border border-white/30 p-2 rounded-md"
+                onClick={toggleMenu}
+              >
+                {menuOpen ? (
+                  <CloseIcon fontSize="medium" />
+                ) : (
+                  <MenuIcon fontSize="medium" />
+                )}
+              </button>
             </div>
-            <div
-              id="mobile-nav-menu"
-              class="lg:hidden hidden flex-col gap-3 rounded-lg border border-white/10 bg-black/80 p-4 backdrop-blur"
-            >
-              <a
-                href="https://basescan.org/token/0x9a26F5433671751C3276a065f57e5a02D2817973"
-                target="_blank"
-                rel="noreferrer"
-                class="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
-              >
-                CONTRACT
+
+            {/* Mobile Menu */}
+            {menuOpen && (
+              <div className="flex flex-col gap-3 rounded-lg border border-white/10 bg-black/80 p-4 backdrop-blur lg:hidden">
+                <a
+                  href="https://basescan.org/token/0x9a26F5433671751C3276a065f57e5a02D2817973"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
+                >
+                  CONTRACT
+                </a>
+                <a
+                  href="https://en.wikipedia.org/wiki/Keyboard_Cat"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
+                >
+                  WHITEPAPER
+                </a>
+                <a
+                  // href=""
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
+                >
+                  COMMUNITY MEMES
+                </a>
+                <a
+                  // href=""
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
+                >
+                  OFFICIAL CONTENT
+                </a>
+
+              </div>
+            )}
+
+            {/* White line */}
+            {/* <div className="border-b border-white opacity-80"></div> */}
+            <div className="border-b border-white opacity-80 hidden lg:block"></div>
+
+            {/* Icons below line */}
+            <div className="hidden lg:flex justify-end items-center mt-4 space-x-2">
+              <a target="_blank" href="https://x.com/KeyboardCatBase">
+                <img
+                  src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/twitterlogo.svg"
+                  alt="Twitter"
+                  className="w-5"
+                />
               </a>
-              <a
-                href="https://en.wikipedia.org/wiki/Keyboard_Cat"
-                target="_blank"
-                rel="noreferrer"
-                class="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
-              >
-                WHITEPAPER
+              <a target="_blank" href="https://t.me/keyboardcatonbase">
+                <img
+                  src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/telelogo.svg"
+                  alt="Telegram"
+                  className="w-5"
+                />
               </a>
             </div>
           </nav>
         </header>
+
         <div class="max-w-(--breakpoint-lg) m-auto relative">
-          <div class="lg:flex justify-between pr-3 hidden">
+          {/* <div class="lg:flex justify-between pr-3 hidden">
             <div class="lg:flex justify-end hidden">
               <div class="pt-1 w-5">
                 <a target="_blank" href="https://x.com/KeyboardCatBase">
@@ -125,7 +180,7 @@ const Header = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
           <div class="flex flex-col justify-center items-center visible">
             <img
               src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/keycatgif.gif"
@@ -133,6 +188,7 @@ const Header = () => {
               alt="Keyboard Cat"
               height=""
             />
+
             <div class="flex items-center mb-4">
               <div
                 class="mr-2 hidden lg:block"
@@ -162,17 +218,31 @@ const Header = () => {
               </div>
             </div>
           </div>
+
           <div class="flex justify-center flex-col items-center">
             <div>
               <div class="mb-3 hidden lg:block">
-                <h1 class="lg:text-9xl text-3xl text-center">
+                <h1 class="lg:text-7xl text-5xl text-center"
+                  // class="lg:text-6xl text-2xl text-center"
+                  style={{
+                    fontFamily: '"Press Start 2P", cursive',
+                    letterSpacing: "-1px",
+                    lineHeight: "1.4",
+                  }}
+                >
                   KEYBOARD <br />
                   CAT
                   <br />
                 </h1>
               </div>
               <div class="mb-3 lg:hidden">
-                <h1 class="text-6xl text-center">
+                <h1 class="text-3xl text-center"
+                  style={{
+                    fontFamily: '"Press Start 2P", cursive',
+                    letterSpacing: "-1px",
+                    lineHeight: "1.4",
+                  }}
+                >
                   KEYBOARD <br />
                   CAT
                   <br />
@@ -187,7 +257,7 @@ const Header = () => {
                 </p>
               </div>
               <div class="lg:hidden">
-                <p class="text-center text-md">
+                <p class="text-center text-md font-semibold">
                   OFFICIAL MEME COIN
                   <br />
                   THE LEGEND LIVES ON
@@ -195,7 +265,8 @@ const Header = () => {
                 </p>
               </div>
             </div>
-            <div class="my-10">
+            <BuyButton />
+            {/* <div class="my-10">
               <a
                 target="_blank"
                 href="https://www.coinbase.com/advanced-trade/spot/KEYCAT-USD"
@@ -204,7 +275,7 @@ const Header = () => {
                   Buy Now
                 </div>
               </a>
-            </div>
+            </div> */}
             <div class="flex lg:flex-row flex-col lg:w-full lg:justify-around lg:mb-16 border-t border-t-white lg:border-none pt-6 lg:pt-0"></div>
             <div class="lg:w-50 pb-30 flex flex-col items-center lg:mb-16 lg:w-1/4 md:w-1/2 w-3/4">
               <div class="lg:mb-2 mb-6">
@@ -256,3 +327,4 @@ const Header = () => {
 };
 
 export default Header;
+
