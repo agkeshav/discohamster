@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import imageSrc from "../assets/images.jpeg";
 const Header = () => {
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <div class="relative z-0 overflow-hidden">
@@ -152,7 +147,7 @@ const Header = () => {
                   color: "transparent",
                 }}
               >
-                <p class="lg:text-[30px] text-2xl">$KEYCAT ON</p>
+                <p class="lg:text-[30px] text-2xl">$DISCO ON</p>
               </div>
               <div class="ml-2 lg:w-20 mt-0.5 w-16">
                 <img
@@ -166,8 +161,8 @@ const Header = () => {
             <div>
               <div class="mb-3 hidden lg:block">
                 <h1 class="lg:text-9xl text-3xl text-center">
-                  KEYBOARD <br />
-                  CAT
+                  DISCO <br />
+                  HAMSTER
                   <br />
                 </h1>
               </div>

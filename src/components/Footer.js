@@ -12,14 +12,7 @@ function Footer() {
         mt: "auto",
       }}
     >
-      <Typography
-        variant="h8"
-        sx={{
-          fontFamily: '"Press Start 2P"',
-          color: "white",
-
-        }}
-      >
+      <Typography variant="h5">
         $DISCO is a meme coin with no intrinsic value or expectation of
         financial return.
         <br />
