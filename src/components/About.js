@@ -1,4 +1,4 @@
-import imageSrc from "../assets/images.jpeg";
+import imageSrc from "../assets/aboutimg.jpg";
 import buttoniconblue from "../assets/buttoniconblue.svg"
 import baselogo from "../assets/baselogo.svg"
 import catpaw from "../assets/Tan-Cat-Paw-PNG.webp"
@@ -20,7 +20,7 @@ function About() {
                 transform: "scale(0.60, 0.90)",
                 transformOrigin: "left",
               }}>
-              Building the next chapter of the Keyboard Cat universe
+              Building the next chapter of the Disco Hamster universe
             </h2>
 
             <p className="mt-4 text-lg md:text-xl text-slate-700">
@@ -53,7 +53,7 @@ function About() {
                   </h3>
                 </div>
                 <p className="mt-6 text-base md:text-lg text-slate-700">
-                  Trade $KEYCAT and any other Base token with a playful interface built for speed, clarity, and memecoin magic.
+                  Trade $DISCO and any other Base token with a playful interface built for speed, clarity, and memecoin magic.
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-2 text-sm uppercase tracking-widest text-blue-700">
@@ -88,7 +88,7 @@ function About() {
                   </h3>
                 </div>
                 <p className="mt-6 text-base md:text-lg text-slate-700">
-                  Support community creations from day one with tokens paired with $KEYCAT.
+                  Support community creations from day one with tokens paired with $DISCO.
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-2 text-sm uppercase tracking-widest text-blue-700">
@@ -99,40 +99,7 @@ function About() {
               </div>
             </article>
 
-            {/* Mini-App Library*/}
-            <article className="flex flex-col justify-between rounded-3xl border border-blue-200 bg-white/80 p-6 shadow-md backdrop-blur">
-              <div>
-                <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100">
-                    <img
-                      src={catpaw}
-                      alt="Launch Pad icon"
-                      className="h-9 w-9 object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="text-1xl md:text-1xl lg:text-2xl text-blue-800 leading-snug"
-                    style={{
-                      fontFamily: '"Press Start 2P", cursive',
-                      color: "#0052FF",
-                      transform: "scale(0.60, 0.90)",
-                      transformOrigin: "left",
-                    }}
-                  >
-                    Mini-App Library
-                  </h3>
-                </div>
-                <p className="mt-6 text-base md:text-lg text-slate-700">
-                  Discover bite-sized experiences from rhythm games to creative tools, all starring the Keyboard Cat community.
-                </p>
-              </div>
-              <div className="mt-8 flex items-center gap-2 text-sm uppercase tracking-widest text-blue-700">
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-blue-400"></span>
-                  Stay tuned
-                </span>
-              </div>
-            </article>
+
           </div>
 
           {/* Join Links */}
@@ -147,10 +114,6 @@ function About() {
                 Telegram
               </a>
               ,{" "}
-              <a href="https://warpcast.com/keycat" target="_blank" className="text-blue-600 underline decoration-dotted underline-offset-4">
-                Farcaster
-              </a>
-              , or{" "}
               <a href="https://x.com/KeyboardCatBase" target="_blank" className="text-blue-600 underline decoration-dotted underline-offset-4">
                 X(formally known as Twitter)
               </a>{" "}
@@ -167,7 +130,7 @@ function About() {
             className="rounded-lg w-full object-cover mb-10 max-w-full"
             src={imageSrc}
             alt="Keyboard Cat"
-            style={{ height: "400px", objectPosition: "center" }}
+            style={{ height: "500px", objectPosition: "center" }}
           />
           <p className="text-xl lg:text-2xl mb-10">
             Disco Hamster is an electrifying internet meme featuring a funky little hamster who can’t stop grooving to the beat! Bursting onto the scene with glitter, lights, and unstoppable moves, this disco-loving rodent has spun its way into the hearts of meme lovers everywhere. From dazzling dance floors to viral video loops, Disco Hamster embodies the spirit of fun, rhythm, and chaos that defines meme culture — one spin at a time. 🐹✨🕺

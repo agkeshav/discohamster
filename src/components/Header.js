@@ -3,58 +3,35 @@ import imageSrc from "../assets/images.jpeg";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import BuyButton from "./BuyBotton";
+import BaseLogo from "../assets/baselogo.svg";
+import dexscreenerlogo from "../assets/dexscreenerlogo.webp";
+import coinmarketcaplogo from "../assets/cmclogo.webp";
+import telegramlogo from "../assets/telelogoblue.webp";
+import xlogo from "../assets/xlogo.webp";
+import { WHITEPAPER_URL } from "./constants";
+
 
 const Header = () => {
-  const [value, setValue] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
     <div class="relative z-0 overflow-hidden">
-      {/* <div class="min-h-screen text-white relative z-10 bg-blue-800"> */}
       <div
         className="min-h-screen text-white relative z-10"
         style={{ backgroundColor: "#0052FF" }}
       >
         <header className="text-white font-bold mb-5 max-w-(--breakpoint-lg) m-auto pt-2 relative px-6 lg:px-0">
           <nav className="flex flex-col gap-4 lg:gap-0">
-            {/* Top nav row */}
-            {/* <div className="flex items-center justify-between py-6">
-              <ul className="flex items-center space-x-4">
-                <li className="hover:underline">
-                  <a
-                    href="https://basescan.org/token/0x9a26F5433671751C3276a065f57e5a02D2817973"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    CONTRACT
-                  </a>
-                </li>
-                <li className="hover:underline">
-                  <a
-                    href="https://en.wikipedia.org/wiki/Keyboard_Cat"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    WHITEPAPER
-                  </a>
-                </li>
-              </ul>
-            </div> */}
-
-
             {/* Top Nav Row */}
             <div className="flex items-center justify-between py-6">
               {/* Left side links */}
               <ul className="hidden lg:flex items-center space-x-6">
                 <li className="hover:underline">
                   <a
-                    href="https://basescan.org/token/0x9a26F5433671751C3276a065f57e5a02D2817973"
+                    // the link to the contract
+                    href="https://basescan.org/token/0x96DDfa5D0306DD5327015aB40084Fedf258ad2A2"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -63,29 +40,11 @@ const Header = () => {
                 </li>
                 <li className="hover:underline">
                   <a
-                    href="https://en.wikipedia.org/wiki/Keyboard_Cat"
+                    href={WHITEPAPER_URL}
                     target="_blank"
                     rel="noreferrer"
                   >
                     WHITEPAPER
-                  </a>
-                </li>
-                <li className="hover:underline">
-                  <a
-                    // href=""
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    COMMUNITY MEMES
-                  </a>
-                </li>
-                <li className="hover:underline">
-                  <a
-                    // href=""
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    OFFICIAL CONTENT
                   </a>
                 </li>
               </ul>
@@ -115,90 +74,50 @@ const Header = () => {
                   CONTRACT
                 </a>
                 <a
-                  href="https://en.wikipedia.org/wiki/Keyboard_Cat"
+                  href={WHITEPAPER_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
                 >
                   WHITEPAPER
                 </a>
-                <a
-                  // href=""
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
-                >
-                  COMMUNITY MEMES
-                </a>
-                <a
-                  // href=""
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
-                >
-                  OFFICIAL CONTENT
-                </a>
-
               </div>
             )}
 
-            {/* White line */}
-            {/* <div className="border-b border-white opacity-80"></div> */}
             <div className="border-b border-white opacity-80 hidden lg:block"></div>
 
             {/* Icons below line */}
             <div className="hidden lg:flex justify-end items-center mt-4 space-x-2">
               <a target="_blank" href="https://x.com/KeyboardCatBase">
-                <img
-                  src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/twitterlogo.svg"
-                  alt="Twitter"
-                  className="w-5"
-                />
+                <img src={xlogo} alt="Twitter" className="w-5" />
               </a>
               <a target="_blank" href="https://t.me/keyboardcatonbase">
-                <img
-                  src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/telelogo.svg"
-                  alt="Telegram"
-                  className="w-5"
-                />
+                <img src={telegramlogo} alt="Telegram" className="w-5" />
               </a>
             </div>
           </nav>
         </header>
 
         <div class="max-w-(--breakpoint-lg) m-auto relative">
-          {/* <div class="lg:flex justify-between pr-3 hidden">
-            <div class="lg:flex justify-end hidden">
-              <div class="pt-1 w-5">
-                <a target="_blank" href="https://x.com/KeyboardCatBase">
-                  <img src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/twitterlogo.svg" />
-                </a>
-              </div>
-              <div style={{ width: "1.6rem", marginLeft: "10px" }}>
-                <a target="_blank" href="https://t.me/keyboardcatonbase">
-                  <img src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/telelogo.svg" />
-                </a>
-              </div>
-            </div>
-          </div> */}
           <div class="flex flex-col justify-center items-center visible">
-            <img
+            {/* <img
               src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/keycatgif.gif"
               class="mb-3 lg:w-[10%] w-36"
               alt="Keyboard Cat"
               height=""
-            />
+            /> */}
 
             <div class="flex items-center mb-4">
               <div
-                class="mr-2 hidden lg:block"
+              
+                class="mr-2 hidden lg:block "
                 style={{
                   borderRadius: "50%",
                   border: "1px solid #fff",
                   overflow: "hidden",
                 }}
               >
-                <img class="w-6" src={imageSrc} />
+                <img class="w-8" src={imageSrc} />
               </div>
               <div
                 class="text-lg font-bold font-[250] mt-1"
@@ -211,10 +130,7 @@ const Header = () => {
                 <p class="lg:text-[30px] text-2xl">$DISCO ON</p>
               </div>
               <div class="ml-2 lg:w-20 mt-0.5 w-16">
-                <img
-                  src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/baselogo.svg"
-                  alt="Base Logo"
-                />
+                <img src={BaseLogo} alt="Base Logo" />
               </div>
             </div>
           </div>
@@ -222,7 +138,8 @@ const Header = () => {
           <div class="flex justify-center flex-col items-center">
             <div>
               <div class="mb-3 hidden lg:block">
-                <h1 class="lg:text-7xl text-5xl text-center"
+                <h1
+                  class="lg:text-7xl text-5xl text-center"
                   // class="lg:text-6xl text-2xl text-center"
                   style={{
                     fontFamily: '"Press Start 2P", cursive',
@@ -230,21 +147,22 @@ const Header = () => {
                     lineHeight: "1.4",
                   }}
                 >
-                  KEYBOARD <br />
-                  CAT
+                  DISCO <br />
+                  HAMSTER
                   <br />
                 </h1>
               </div>
               <div class="mb-3 lg:hidden">
-                <h1 class="text-3xl text-center"
+                <h1
+                  class="text-3xl text-center"
                   style={{
                     fontFamily: '"Press Start 2P", cursive',
                     letterSpacing: "-1px",
                     lineHeight: "1.4",
                   }}
                 >
-                  KEYBOARD <br />
-                  CAT
+                  DISCO <br />
+                  HAMSTER
                   <br />
                 </h1>
               </div>
@@ -266,16 +184,6 @@ const Header = () => {
               </div>
             </div>
             <BuyButton />
-            {/* <div class="my-10">
-              <a
-                target="_blank"
-                href="https://www.coinbase.com/advanced-trade/spot/KEYCAT-USD"
-              >
-                <div class="flex w-60 font-semibold py-3 px-10 border rounded-[53px] bg-white text-blue-800 justify-center mb-4 lg:mb-0">
-                  Buy Now
-                </div>
-              </a>
-            </div> */}
             <div class="flex lg:flex-row flex-col lg:w-full lg:justify-around lg:mb-16 border-t border-t-white lg:border-none pt-6 lg:pt-0"></div>
             <div class="lg:w-50 pb-30 flex flex-col items-center lg:mb-16 lg:w-1/4 md:w-1/2 w-3/4">
               <div class="lg:mb-2 mb-6">
@@ -283,18 +191,10 @@ const Header = () => {
               </div>
               <div class="flex pb-8 justify-between ">
                 <a href="https://x.com/KeyboardCatBase" target="_blank">
-                  <img
-                    src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/xlogo.webp"
-                    class="h-8"
-                    alt="X logo"
-                  />
+                  <img src={xlogo} class="h-8" alt="X logo" />
                 </a>
                 <a href="https://t.me/keyboardcatonbase" target="_blank">
-                  <img
-                    src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/telelogoblue.webp"
-                    class="h-8"
-                    alt="Telegram Logo"
-                  />
+                  <img src={telegramlogo} class="h-8" alt="Telegram Logo" />
                 </a>
 
                 <a
@@ -302,7 +202,7 @@ const Header = () => {
                   target="_blank"
                 >
                   <img
-                    src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/cmclogo.webp"
+                    src={coinmarketcaplogo}
                     class="h-8"
                     alt="Coinmarketcap Logo"
                   />
@@ -312,7 +212,7 @@ const Header = () => {
                   target="_blank"
                 >
                   <img
-                    src="https://d2r7wh58zh6z5r.cloudfront.net/public/images/dexscreenerlogo.webp"
+                    src={dexscreenerlogo}
                     class="h-8"
                     alt="Dexscreener Logo"
                   />
@@ -327,4 +227,3 @@ const Header = () => {
 };
 
 export default Header;
-
