@@ -1,15 +1,25 @@
 import React from "react";
 
+// Props: title (string), description (string, supports children as markup)
 function InfoCard({ title, description }) {
   return (
-    <article class="flex flex-col justify-between rounded-3xl border border-blue-800/20 bg-white p-3 ">
-      <div class="md:mr-10">
-        <h2 class=" lg:text-3xl  text-2xl md:mb-2 my-10 text-blue-800">
-          {title}
-        </h2>
-        <p class="text-xl">{description}</p>
+    <div>
+
+      <h2 className="font-mono font-bold text-1xl md:text-3xl mb-4 leading-tight"
+        style={{
+          fontFamily: '"Press Start 2P", cursive',
+          wordSpacing: "8px",
+          lineHeight: "1.4",
+          transform: "scale(0.85, 0.95)",
+          transformOrigin: "left",
+        }}
+      >
+        {title}
+      </h2>
+      <div className="text-xl md:text-1xl font-normal">
+        {description}
       </div>
-    </article>
+    </div>
   );
 }
 
