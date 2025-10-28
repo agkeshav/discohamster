@@ -102,31 +102,35 @@ const Header = () => {
               height=""
             /> */}
 
-            <div class="flex items-center mb-4">
+
+            <div className="flex items-center gap-x-2 mb-4">
               <div
-                class="mr-2 hidden lg:block "
+                className="hidden lg:flex items-center justify-center"
                 style={{
                   borderRadius: "50%",
                   border: "1px solid #fff",
                   overflow: "hidden",
+                  height: "30px",
+                  width: "30px",
                 }}
               >
-                <img class="w-8" src={imageSrc} />
+                <img src={imageSrc} alt="Profile" style={{ height: "100%", width: "100%", objectFit: "cover" }} />
               </div>
               <div
-                class="text-lg font-bold font-[250] mt-1"
+                className="text-lg font-bold font-[250]"
                 style={{
                   background: "linear-gradient(to right, #B0E0E6, #00BFFF)",
                   WebkitBackgroundClip: "text",
                   color: "transparent",
                 }}
               >
-                <p class="lg:text-[30px] text-2xl">$DISCO ON</p>
+                <p className="lg:text-[30px] text-2xl m-0">$DISCO ON</p>
               </div>
-              <div class="ml-2 lg:w-20 mt-0.5 w-16">
-                <img src={BaseLogo} alt="Base Logo" />
+              <div className="ml-2 lg:w-20 w-16 flex items-center justify-center">
+                <img src={BaseLogo} alt="Base Logo" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
+
           </div>
 
           <div class="flex justify-center flex-col items-center">
