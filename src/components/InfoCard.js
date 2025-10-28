@@ -12,6 +12,7 @@ function InfoCard({ title, description }) {
           lineHeight: "1.4",
           transform: "scale(0.85, 0.95)",
           transformOrigin: "left",
+          color: "#292035",
         }}
       >
         {title}

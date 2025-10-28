@@ -8,8 +8,7 @@ import dexscreenerlogo from "../assets/dexscreenerlogo.webp";
 import coinmarketcaplogo from "../assets/cmclogo.webp";
 import telegramlogo from "../assets/telelogoblue.webp";
 import xlogo from "../assets/xlogo.webp";
-import { WHITEPAPER_URL } from "./constants";
-
+import { BASESCAN_CONTRACT_LINK, WHITEPAPER_URL } from "./constants";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +19,7 @@ const Header = () => {
     <div class="relative z-0 overflow-hidden">
       <div
         className="min-h-screen text-white relative z-10"
-        style={{ backgroundColor: "#0052FF" }}
+        style={{ backgroundColor: "#292035" }}
       >
         <header className="text-white font-bold mb-5 max-w-(--breakpoint-lg) m-auto pt-2 relative px-6 lg:px-0">
           <nav className="flex flex-col gap-4 lg:gap-0">
@@ -31,7 +30,7 @@ const Header = () => {
                 <li className="hover:underline">
                   <a
                     // the link to the contract
-                    href="https://basescan.org/token/0x96DDfa5D0306DD5327015aB40084Fedf258ad2A2"
+                    href={BASESCAN_CONTRACT_LINK}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -39,11 +38,7 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="hover:underline">
-                  <a
-                    href={WHITEPAPER_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={WHITEPAPER_URL} target="_blank" rel="noreferrer">
                     WHITEPAPER
                   </a>
                 </li>
@@ -66,7 +61,7 @@ const Header = () => {
             {menuOpen && (
               <div className="flex flex-col gap-3 rounded-lg border border-white/10 bg-black/80 p-4 backdrop-blur lg:hidden">
                 <a
-                  href="https://basescan.org/token/0x9a26F5433671751C3276a065f57e5a02D2817973"
+                  href={BASESCAN_CONTRACT_LINK}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-md px-2 py-2 text-sm font-semibold transition-colors hover:bg-white/10"
@@ -109,7 +104,6 @@ const Header = () => {
 
             <div class="flex items-center mb-4">
               <div
-              
                 class="mr-2 hidden lg:block "
                 style={{
                   borderRadius: "50%",

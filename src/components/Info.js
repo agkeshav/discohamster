@@ -15,34 +15,34 @@ function Info() {
       ),
     },
     {
-      title: "Where can I buy the Keyboard Cat meme coin?",
+      title: "Where can I buy the Disco Hamster meme coin?",
       description: (
         <>
-          The official $KEYCAT token is live on Base and tradable on Coinbase Advanced Trade.
+          The official $DISCO token is live on Base and tradable on Uniswap.
           Visit the{" "}
           <a href="#" className="underline text-blue-600 hover:text-blue-800">
-            Keyboard Cat Coinbase listing
+            Disco Hamster Uniswap Pool
           </a>{" "}
           to swap USD, USDC, or other Base assets for the meme coin in a few clicks.
-          You can also explore decentralized liquidity via Base-native DEX tools.
+          
         </>
       ),
     },
     {
-      title: "So Keycat is like Dogecoin?",
+      title: "So Disco is like Dogecoin?",
       description: (
         <>
           This token and Dogecoin are indeed very similar.
           However, this meme coin is unique in that it pays tribute to
-          the historic, legendary, and iconic Keyboard Cat.
+          the historic, legendary, and iconic Disco Hamster.
         </>
       ),
     },
     {
-      title: "What makes Keycat different from other crypto projects?",
+      title: "What makes Disco different from other crypto projects?",
       description: (
         <>
-          Keycat is the shorthand for the Keyboard Cat crypto token.
+          Disco is the shorthand for the Disco Hamster crypto token.
           It blends officially licensed IP, a vibrant meme heritage,
           and the speed of the Base network to deliver an experience
           you can only find here.
@@ -68,6 +68,7 @@ function Info() {
               lineHeight: "1.4",
               transform: "scale(0.85, 0.95)",
               transformOrigin: "left",
+              color: "#292035",
             }}
           >
             Info
@@ -90,32 +91,34 @@ function Info() {
               fontFamily: '"Press Start 2P", cursive',
               transform: "scale(0.85, 0.95)",
               transformOrigin: "left",
+              color: "#292035",
             }}
           >
             Get Involved!
           </h2>
 
           <p className="text-xl lg:text-2xl mb-10 mt-14">
-            A memecoin is only as strong as it's community so please join us on{" "}{" "} 
+            A memecoin is only as strong as it's community so please join us on{" "}
             <span
               style={{
                 fontFamily: '"Press Start 2P", cursive',
-                color: "#0052FF",
+                color: "#292035",
                 fontSize: "0.7em",
                 transform: "scale(0.8, 0.8)",
                 display: "inline",
               }}
             >
-              X, Telegram, Farcaster!
+              X, Telegram!
             </span>
             <br />
             <br />
             Join our community and share your ideas, or just hang out :-)
             <br />
             <br />
-            As this is a decentralized cryptocurrency everyone should feel empowered to contribute; it is up to the community to work together and spread the love that is the Keyboard Cat!
+            As this is a decentralized cryptocurrency everyone should feel
+            empowered to contribute; it is up to the community to work together
+            and spread the love that is the Disco Hamster!
           </p>
-
         </div>
       </div>
     </section>
